@@ -11,3 +11,7 @@ $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce
 
 //Display the result
 $HADOOP_HOME/bin/hadoop fs -cat output/part-r-00000
+
+//After the implementation
+$HADOOP_HOME/sbin/stop-all.sh
+$HADOOP_HOME/sbin/mr-jobhistory-daemon.sh stop historyserver
