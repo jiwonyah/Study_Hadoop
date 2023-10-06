@@ -1,0 +1,9 @@
+$HADOOP_HOME/sbin/start-all.sh
+$HADOOP_HOME/sbin/mr-jobhistory-daemon.sh start historyserver
+
+jps
+
+$HADOOP_HOME/bin/hadoop fs -put abc.txt
+$HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar wordcount abc.txt output
+
+$HADOOP_HOME/bin/hadoop fs -cat output/part-r-00000
